@@ -9,7 +9,7 @@ def get_news():
     try:
         main_url.raise_for_status()
     except Exception as exc:
-         print('There was a problem: %s' % (exc))
+        print('There was a problem: %s' % exc)
 
     # bs4 parsing of url
     main_url_soup = bs4.BeautifulSoup(main_url.text, "html.parser")
@@ -19,7 +19,7 @@ def get_news():
     # cleans url addresses from html statements and descriptions
     raw_url_regex = re.compile(r'''(
     pl            
-    [-a-zA-Z0-9\/_]+
+    [-a-zA-Z0-9/_]+
     .html
     )''', re.VERBOSE)
     url_result = raw_url_regex.findall(raw_url)
