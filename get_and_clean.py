@@ -3,13 +3,14 @@ import bs4
 import requests
 import re
 
+
 def check_url(url):
     # gets/checks & passes url
     source_url = requests.get(url)
     try:
         source_url.raise_for_status()
     except Exception as exc:
-        print('There was a problem: %s' % (exc))
+        print('There was a problem: %s' % exc)
     return source_url
 
 
