@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="Procfile" type="PLAIN_TEXT" />
       <mapping ext="kv" type="PLAIN_TEXT" />
+      <mapping pattern="psutil" type="Python" />
       <mapping ext="sqlite3" type="SQL" />
     </extensionMap>
   </component>
